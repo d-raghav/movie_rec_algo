@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Microsoft Engage Movie Recomendor Algorithms</h1>
+
+<div class="form">
+    <form method="get">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" name="name">
+        </p>
+        <p>
+            <label for="sort">Sort State</label>
+            <input type="text" name="sort">
+        </p>
+        <p>
+            <label for="comedy">Comedy</label>
+            <input type="text" name="comedy">
+        </p>
+        <p>
+            <label for="action">Action</label>
+            <input type="text" name="action">
+        </p>
+        <p>
+            <label for="rec">Recomendor State</label>
+            <input type="text" name="rec">
+        </p>
+        <p>
+            <button type="submit">Submit</button>
+        </p>
+        
+    </form>
+</div>
+
+{% for image in images %}
+<figure>
+<div class="img">
+    <img src="{{ image[2] }}" >
+    <figcaption> {{ image[1] }} </figcaption>
+</div>
+</figure>
+{% endfor %}
+
+    
+
+{% endblock %}
